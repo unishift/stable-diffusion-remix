@@ -1,0 +1,7 @@
+torch
+git+https://github.com/huggingface/diffusers.git
+Pillow
+transformers
+accelerate
+scipy
+safetensors
