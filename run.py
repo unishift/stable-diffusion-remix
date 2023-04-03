@@ -386,6 +386,7 @@ def main():
         "stabilityai/stable-diffusion-2-1-unclip", torch_dtype=torch.float16, variation="fp16"
     )
     pipe = pipe.to(args.device)
+    pipe.enable_xformers_memory_efficient_attention()
 
     content_img = Image.open(args.content_img).convert('RGB')
     style_img = Image.open(args.style_img).convert('RGB')
